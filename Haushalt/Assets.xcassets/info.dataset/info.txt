@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+
+font name: nevis
+font link: http://tenbytwenty.com/?xxxx_posts=nevis
+font author: Ten by Twenty
+font author site: http://tenbytwenty.com/
+
+icon designer: Mike Rowe
+icon designer link: /itsmikerowe
+        
+{"bg":"#F46912","icon":"#FCB826","font":"#ffffff"}
+      
