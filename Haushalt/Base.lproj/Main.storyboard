@@ -109,7 +109,6 @@
         <!--ChoresVC-->
         <scene sceneID="83P-K1-7zX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="huN-Zc-wcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Chores" id="4Dl-Uu-KHT" customClass="ChoresVC" customModule="Haushalt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJM-PR-YOd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -248,6 +247,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huN-Zc-wcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3733" y="810"/>
         </scene>
@@ -544,7 +544,7 @@
         <scene sceneID="W3J-Fu-TNJ">
             <objects>
                 <viewController storyboardIdentifier="LoginVC" id="JBr-AR-OOA" customClass="LoginVC" customModule="Haushalt" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="AWx-bv-sKZ">
+                    <view key="view" contentMode="scaleToFill" id="AWx-bv-sKZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -573,7 +573,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDi-1w-qMp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDi-1w-qMp">
                                 <rect key="frame" x="94" y="823" width="226" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Tap here to make an account."/>
@@ -581,7 +581,7 @@
                                     <segue destination="jXX-hJ-XMj" kind="show" id="U0p-d8-rLY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLz-o0-EvC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLz-o0-EvC">
                                 <rect key="frame" x="172" y="590" width="70" height="43"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
                                 <state key="normal" title="Login">
@@ -748,6 +748,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FXN-pV-0PF"/>
-        <segue reference="ztI-Ka-eVP"/>
+        <segue reference="60k-hw-Fke"/>
     </inferredMetricsTieBreakers>
 </document>
