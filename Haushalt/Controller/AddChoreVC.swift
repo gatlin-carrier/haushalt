@@ -27,12 +27,13 @@ class AddChoreVC: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //UI Changes
-        self.choreText.layer.cornerRadius = 4
+        self.choreText.layer.cornerRadius = 6
         
         choreText.text = "Add your new chore here."
         choreText.textColor = UIColor.white
         //Delegation
         choreText.delegate = self
+        
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {

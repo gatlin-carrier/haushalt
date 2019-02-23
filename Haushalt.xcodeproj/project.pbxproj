@@ -18,14 +18,13 @@
 		D52F53F121C899DD002A2E86 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F53F021C899DD002A2E86 /* AuthService.swift */; };
 		D539BDC621A6766C00C2F90D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D539BDC521A6766C00C2F90D /* GoogleService-Info.plist */; };
 		D539BDC921A6792300C2F90D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539BDC821A6792300C2F90D /* DataService.swift */; };
+		D5547F2A2221C807009E1854 /* UpdatedChoresCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5547F292221C807009E1854 /* UpdatedChoresCVC.swift */; };
 		D557ED6D220BED4A005DAB76 /* ChoreCellCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557ED6C220BED4A005DAB76 /* ChoreCellCVC.swift */; };
 		D5EBE8F021CAD9CF00DA61D6 /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EBE8EF21CAD9CF00DA61D6 /* CreateUserVC.swift */; };
 		D5EBE8F421CADDED00DA61D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EBE8F321CADDED00DA61D6 /* Constants.swift */; };
-		D5EBE8F621CAEA8D00DA61D6 /* ChoresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EBE8F521CAEA8D00DA61D6 /* ChoresVC.swift */; };
 		D5EBE8F821D0408E00DA61D6 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EBE8F721D0408E00DA61D6 /* Chore.swift */; };
 		D5EBE8FA21D0446F00DA61D6 /* ChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EBE8F921D0446F00DA61D6 /* ChoreCell.swift */; };
 		D5FDD04F21E0458E004B02A1 /* AddChoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDD04E21E0458E004B02A1 /* AddChoreVC.swift */; };
-		D5FDD05121E47321004B02A1 /* ChoresCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDD05021E47321004B02A1 /* ChoresCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,14 +43,13 @@
 		D52F53F021C899DD002A2E86 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D539BDC521A6766C00C2F90D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D539BDC821A6792300C2F90D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D5547F292221C807009E1854 /* UpdatedChoresCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatedChoresCVC.swift; sourceTree = "<group>"; };
 		D557ED6C220BED4A005DAB76 /* ChoreCellCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreCellCVC.swift; sourceTree = "<group>"; };
 		D5EBE8EF21CAD9CF00DA61D6 /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
 		D5EBE8F321CADDED00DA61D6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D5EBE8F521CAEA8D00DA61D6 /* ChoresVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresVC.swift; sourceTree = "<group>"; };
 		D5EBE8F721D0408E00DA61D6 /* Chore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
 		D5EBE8F921D0446F00DA61D6 /* ChoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreCell.swift; sourceTree = "<group>"; };
 		D5FDD04E21E0458E004B02A1 /* AddChoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChoreVC.swift; sourceTree = "<group>"; };
-		D5FDD05021E47321004B02A1 /* ChoresCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +115,8 @@
 				D523DE56219F462300DF696A /* LoginVC.swift */,
 				D523DE5A219F720500DF696A /* ChatVC.swift */,
 				D5EBE8EF21CAD9CF00DA61D6 /* CreateUserVC.swift */,
-				D5EBE8F521CAEA8D00DA61D6 /* ChoresVC.swift */,
 				D5FDD04E21E0458E004B02A1 /* AddChoreVC.swift */,
-				D5FDD05021E47321004B02A1 /* ChoresCVC.swift */,
+				D5547F292221C807009E1854 /* UpdatedChoresCVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,7 +298,6 @@
 				D539BDC921A6792300C2F90D /* DataService.swift in Sources */,
 				D5EBE8FA21D0446F00DA61D6 /* ChoreCell.swift in Sources */,
 				D5EBE8F021CAD9CF00DA61D6 /* CreateUserVC.swift in Sources */,
-				D5FDD05121E47321004B02A1 /* ChoresCVC.swift in Sources */,
 				D523DE3F219F444E00DF696A /* ViewController.swift in Sources */,
 				D523DE3D219F444E00DF696A /* AppDelegate.swift in Sources */,
 				D523DE57219F462300DF696A /* LoginVC.swift in Sources */,
@@ -309,7 +305,7 @@
 				D52F53F121C899DD002A2E86 /* AuthService.swift in Sources */,
 				D5EBE8F821D0408E00DA61D6 /* Chore.swift in Sources */,
 				D557ED6D220BED4A005DAB76 /* ChoreCellCVC.swift in Sources */,
-				D5EBE8F621CAEA8D00DA61D6 /* ChoresVC.swift in Sources */,
+				D5547F2A2221C807009E1854 /* UpdatedChoresCVC.swift in Sources */,
 				D5FDD04F21E0458E004B02A1 /* AddChoreVC.swift in Sources */,
 				D5EBE8F421CADDED00DA61D6 /* Constants.swift in Sources */,
 			);
