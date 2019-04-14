@@ -17,7 +17,7 @@ func registerUser(withEmail email: String, andPassword password: String, userCre
         }
         
         let userData = ["provider": authData.providerID, "email": authData.email]
-        DataService.instance.createBDUser(uid: authData.uid, userData: userData as Dictionary<String, Any>)
+        DataService.instance.createDBUser(uid: authData.uid, userData: userData as Dictionary<String, Any>)
         userCreationComplete(true, nil)
     }
 }

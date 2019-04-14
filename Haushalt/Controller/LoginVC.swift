@@ -22,7 +22,6 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     //Actions
     @IBAction func loginBtnTapped(_ sender: Any) {

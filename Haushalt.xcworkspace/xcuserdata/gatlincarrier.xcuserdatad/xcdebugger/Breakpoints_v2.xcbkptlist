@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Haushalt/Controller/LoginVC.swift"
-            timestampString = "574016019.62853"
+            timestampString = "576953552.2340029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "loginBtnTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>

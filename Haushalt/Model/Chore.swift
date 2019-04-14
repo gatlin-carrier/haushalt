@@ -16,14 +16,15 @@ class Chore {
     private(set) var deleted: Bool!
     private(set) var documentId: String!
     private(set) var doer: String!
-    
-    init(username: String, choreText: String, dueDate: String, deleted: Bool, documentId: String, doer: String) {
-        
+    private(set) var group: Bool!
+ 
+    init(username: String, choreText: String, dueDate: String, deleted: Bool, documentId: String, doer: String, group: Bool) {
         self.username = username
         self.choreText = choreText
         self.dueDate = dueDate
         self.deleted = deleted
         self.documentId = documentId
         self.doer = doer
+        self.group = group
     }
 }

@@ -19,12 +19,8 @@ class CreateUserVC: UIViewController {
     @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet weak var submitButton: UIButton!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
     @IBAction func createTapped(_ sender: Any) {
@@ -32,8 +28,6 @@ class CreateUserVC: UIViewController {
         guard let email = emailText.text,
             let password = passwordText.text,
             let username = usernameText.text else { return }
-        
-        
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if let error = error {
@@ -51,8 +45,8 @@ class CreateUserVC: UIViewController {
             guard let userId = user?.user.uid else { return }
             Firestore.firestore().collection(USERS_REF).document(userId).setData([
                 USERNAME : username,
+                 
                 ], completion: { (error) in
-                
                     if let error = error {
                         debugPrint(error.localizedDescription)
                     } else {
@@ -60,13 +54,9 @@ class CreateUserVC: UIViewController {
                     }
             })
         }
-        
-        
     }
     
     @IBAction func closeTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-
 }

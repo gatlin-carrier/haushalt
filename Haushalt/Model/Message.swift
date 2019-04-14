@@ -9,12 +9,9 @@
 import Foundation
 
 class Message {
-    
     var sender : String = ""
-    
-    var MessageBody : String = ""
-    
-    
-    
-    
+    var messageBody : String = ""
+    var chatId: String!
+    var userId: String!
+    var timeStamp: Date!
 }

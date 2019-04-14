@@ -35,7 +35,7 @@ class DataService {
         return _REF_CHORES
     }
     
-    func createBDUser(uid: String, userData: Dictionary<String, Any>) {
+    func createDBUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(uid).updateChildValues(userData)
     }
 }

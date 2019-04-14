@@ -41,12 +41,14 @@ class UpdatedChoresCVC: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "choreCell", for: indexPath) as? ChoreCellCVC {
+            
             cell.layer.cornerRadius = 6
             cell.configureCell(chore: chores[indexPath.row])
             return cell
-        } else {
-            return UICollectionViewCell()
+        }   else {
+                return UICollectionViewCell()
         }
         
     }
@@ -66,8 +68,9 @@ class UpdatedChoresCVC: UIViewController, UICollectionViewDataSource, UICollecti
                     let choreText = data["choreText"] as? String ?? ""
                     let deleted = data["deleted"] as? Bool ?? false
                     let documentId = document.documentID
+                    let group = data["group"] as? Bool ??  false
                     
-                    let newChore = Chore(username: username, choreText: choreText, dueDate: dueDate, deleted: deleted, documentId: documentId, doer: doer)
+                    let newChore = Chore(username: username, choreText: choreText, dueDate: dueDate, deleted: deleted, documentId: documentId, doer: doer, group: group)
                     
                     self.chores.append(newChore)
                 }
