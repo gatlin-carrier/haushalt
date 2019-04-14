@@ -12,15 +12,14 @@ class User: NSObject {
     var documentId: String?
     var username: String?
     var email: String?
-    var profileImageUrl: String?
     var groups: Bool?
-    var friends: String?
-    init(dictionary: [String: AnyObject]) {
-        self.documentId = dictionary["documentId"] as? String
-        self.username = dictionary["username"] as? String
-        self.email = dictionary["email"] as? String
-        self.profileImageUrl = dictionary["profileImageUrl"] as? String
-        self.friends = dictionary["friends"] as? String
-        self.groups = dictionary["groups"] as? Bool
+    var friends: Bool?
+    
+    init(username: String, documentId: String, email: String, groups: Bool, friends: Bool) {
+        self.username = username
+        self.documentId = documentId
+        self.email = email
+        self.groups = groups
+        self.friends = friends
     }
 }

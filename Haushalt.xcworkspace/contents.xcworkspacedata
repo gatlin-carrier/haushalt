@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/gatlincarrier/Desktop/Haushalt/Haushalt/VIew/UserCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:Haushalt.xcodeproj">
    </FileRef>
    <FileRef

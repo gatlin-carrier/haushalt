@@ -32,7 +32,7 @@ class ChatVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         }
     }
     var friends = [Friend]()
-    var SelectedFriendId = ""
+    var selectedUser: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +65,8 @@ class ChatVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         if let name = Auth.auth().currentUser?.displayName {
             username = name
         }
+        
+        print(selectedUser)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

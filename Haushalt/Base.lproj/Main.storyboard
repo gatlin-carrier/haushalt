@@ -358,14 +358,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="friendCell" id="pky-Br-wSJ" customClass="FriendCell" customModule="Haushalt" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="userCell" id="pky-Br-wSJ" customClass="UserCell" customModule="Haushalt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friend Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ee-z6-ftr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ee-z6-ftr">
                                                     <rect key="frame" x="20" y="8" width="221" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
@@ -376,7 +376,8 @@
                                         </view>
                                         <color key="backgroundColor" white="0.5" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="friendNameLabel" destination="0Ee-z6-ftr" id="jJp-iE-PBg"/>
+                                            <outlet property="userNameLabel" destination="0Ee-z6-ftr" id="vWJ-th-2Fu"/>
+                                            <segue destination="Sfv-xP-cEZ" kind="show" identifier="ChatVCSegueIdentifier" id="Qt8-hA-QL9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -812,6 +813,7 @@
         <image name="icon-left-font-monochrome-white" width="900" height="900"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Qt8-hA-QL9"/>
         <segue reference="60k-hw-Fke"/>
     </inferredMetricsTieBreakers>
 </document>

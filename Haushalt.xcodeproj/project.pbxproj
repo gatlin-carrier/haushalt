@@ -13,7 +13,7 @@
 		D51CFC27225AC7D300C4DE82 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51CFC26225AC7D300C4DE82 /* Groups.swift */; };
 		D51CFC2922612D1500C4DE82 /* Participation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51CFC2822612D1500C4DE82 /* Participation.swift */; };
 		D51CFC2B22612E2800C4DE82 /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51CFC2A22612E2800C4DE82 /* Relationships.swift */; };
-		D51CFC2E2263A22600C4DE82 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51CFC2D2263A22600C4DE82 /* FriendCell.swift */; };
+		D51CFC302263AE4F00C4DE82 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51CFC2F2263AE4F00C4DE82 /* UserCell.swift */; };
 		D5208F562227305600F17F5B /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5208F552227305600F17F5B /* ChatVC.swift */; };
 		D523DE3D219F444E00DF696A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D523DE3C219F444E00DF696A /* AppDelegate.swift */; };
 		D523DE42219F444E00DF696A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D523DE40219F444E00DF696A /* Main.storyboard */; };
@@ -48,7 +48,7 @@
 		D51CFC26225AC7D300C4DE82 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		D51CFC2822612D1500C4DE82 /* Participation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participation.swift; sourceTree = "<group>"; };
 		D51CFC2A22612E2800C4DE82 /* Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
-		D51CFC2D2263A22600C4DE82 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		D51CFC2F2263AE4F00C4DE82 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = /Users/gatlincarrier/Desktop/Haushalt/Haushalt/VIew/UserCell.swift; sourceTree = "<absolute>"; };
 		D5208F552227305600F17F5B /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		D523DE39219F444E00DF696A /* Haushalt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haushalt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D523DE3C219F444E00DF696A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				D5CE12FB2235F7D600A814B6 /* ReceivedMessageCell */,
 				D5CE12FA2235F7CB00A814B6 /* SentMessageCell */,
 				D557ED6C220BED4A005DAB76 /* ChoreCellCVC.swift */,
-				D51CFC2D2263A22600C4DE82 /* FriendCell.swift */,
+				D51CFC2F2263AE4F00C4DE82 /* UserCell.swift */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -361,11 +361,11 @@
 				D5EBE8F821D0408E00DA61D6 /* Chore.swift in Sources */,
 				D51CFC25225AC78800C4DE82 /* Chats.swift in Sources */,
 				D557ED6D220BED4A005DAB76 /* ChoreCellCVC.swift in Sources */,
+				D51CFC302263AE4F00C4DE82 /* UserCell.swift in Sources */,
 				D5547F2A2221C807009E1854 /* UpdatedChoresCVC.swift in Sources */,
 				D5CE130B2239D68E00A814B6 /* FriendsVC.swift in Sources */,
 				D5CE12FE2235F7F100A814B6 /* SentMessageCell.swift in Sources */,
 				D51CFC2322517DF200C4DE82 /* Friend.swift in Sources */,
-				D51CFC2E2263A22600C4DE82 /* FriendCell.swift in Sources */,
 				D5FDD04F21E0458E004B02A1 /* AddChoreVC.swift in Sources */,
 				D525235922496EF1001E0D8F /* User.swift in Sources */,
 				D5CE13072236CF0200A814B6 /* Message.swift in Sources */,
