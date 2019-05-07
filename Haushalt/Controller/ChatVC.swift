@@ -19,20 +19,25 @@ class ChatVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     @IBOutlet weak var SendButton: UIButton!
     @IBOutlet weak var SendMessageView: UIView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var friendNameLabel: UILabel!
     
     //Variables
     
     var messageArray : [Message] = [Message]()
     var username : String!
     var users = [User]()
-    var user: User?
-    var friend: Friend? {
+    var user: User? {
         didSet {
-            navigationItem.title = friend?.username
+            friendNameLabel.text = user?.username
         }
     }
+    var friend: Friend?
     var friends = [Friend]()
-    var selectedUser: User?
+    var selectedUser: User? {
+        didSet {
+            friendNameLabel.text = selectedUser?.username
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +70,6 @@ class ChatVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         if let name = Auth.auth().currentUser?.displayName {
             username = name
         }
-        
-        print(selectedUser)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -139,9 +142,9 @@ class ChatVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         }
     }
     
-    func showChatControllerForFriend(_ friend: Friend) {
-        let chatLogController = ChatVC()
-        chatLogController.friend = friend
-        navigationController?.pushViewController(chatLogController, animated: true)
-    }
+//    func showChatControllerForFriend(_ friend: Friend) {
+//        let chatLogController = ChatVC()
+//        chatLogController.friend = friend
+//        navigationController?.pushViewController(chatLogController, animated: true)
+//    }
 }

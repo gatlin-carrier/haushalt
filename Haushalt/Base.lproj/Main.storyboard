@@ -401,7 +401,7 @@
             </objects>
             <point key="canvasLocation" x="4985.507246376812" y="-381.02678571428572"/>
         </scene>
-        <!--ChatVC-->
+        <!--Title-->
         <scene sceneID="2Y9-a8-FwO">
             <objects>
                 <viewController id="Sfv-xP-cEZ" customClass="ChatVC" customModule="Haushalt" customModuleProvider="target" sceneMemberID="viewController">
@@ -494,6 +494,13 @@
                                     <constraint firstItem="Hpc-Nh-jsi" firstAttribute="top" secondItem="Wvp-Ox-ibf" secondAttribute="top" constant="8" id="xQq-Pr-Nfn"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTR-CK-lhC">
+                                <rect key="frame" x="20" y="94" width="80" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -512,11 +519,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vMu-Qt-eNG"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="FBQ-a0-jaM"/>
                     <connections>
                         <outlet property="SendButton" destination="Hpc-Nh-jsi" id="Bni-vw-h4w"/>
                         <outlet property="SendMessageLabel" destination="jOm-ve-7R2" id="sC7-Fw-jjb"/>
                         <outlet property="SendMessageView" destination="Wvp-Ox-ibf" id="pqu-c8-F1p"/>
                         <outlet property="collectionView" destination="6O2-3T-gui" id="6PB-UG-BwU"/>
+                        <outlet property="friendNameLabel" destination="RTR-CK-lhC" id="4W3-eP-cPv"/>
                         <outlet property="heightConstraint" destination="Kg2-9Q-3rK" id="cxA-k2-YLX"/>
                     </connections>
                 </viewController>

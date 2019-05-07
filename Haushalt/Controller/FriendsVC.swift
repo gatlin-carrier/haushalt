@@ -71,12 +71,12 @@ class FriendsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         }
     }
     
-    var chatController : ChatVC?
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedUser = users[indexPath.row]
     }
     
+    var chatController : ChatVC?
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ChatVCSegueIdentifier"{
             if let collectionCell: UserCell = sender as? UserCell {
