@@ -21,23 +21,17 @@ class ChatVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var friendNameLabel: UILabel!
     
+    
     //Variables
     
     var messageArray : [Message] = [Message]()
     var username : String!
     var users = [User]()
-    var user: User? {
-        didSet {
-            friendNameLabel.text = user?.username
-        }
-    }
-    var friend: Friend?
+    var user: User?
+    
+//    var friend: Friend?
     var friends = [Friend]()
-    var selectedUser: User? {
-        didSet {
-            friendNameLabel.text = selectedUser?.username
-        }
-    }
+    var selectedUser: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,9 +61,11 @@ class ChatVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         
         // Firebase
         
-        if let name = Auth.auth().currentUser?.displayName {
-            username = name
-        }
+//        if let name = Auth.auth().currentUser?.displayName {
+//            username = name
+//        }
+        
+        friendNameLabel.text = user?.username
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -103,7 +99,7 @@ class ChatVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         SendButton.isEnabled = false
         
         let timestamp = Int(Date().timeIntervalSince1970)
-        let toId = user!.documentId!
+        let toId = user!.id!
         let fromId = Auth.auth().currentUser!.uid
         let values = ["MessageBody": SendMessageLabel.text!, "toId": toId, "fromId": fromId, "timestamp": timestamp] as [String : Any]
         let messagesDatabase = Database.database().reference().child("Messages")
@@ -141,10 +137,11 @@ class ChatVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
             self.collectionView.reloadData()
         }
     }
+    //        let chatLogController = ChatVC
+    //        pushViewController(chatLogController, animated: true)
+
     
-//    func showChatControllerForFriend(_ friend: Friend) {
-//        let chatLogController = ChatVC()
-//        chatLogController.friend = friend
-//        navigationController?.pushViewController(chatLogController, animated: true)
+//    func showChatControllerForUser(_ selectedUser: User?) {
+//        print("ChatVC username: \(selectedUser?.username)")
 //    }
 }

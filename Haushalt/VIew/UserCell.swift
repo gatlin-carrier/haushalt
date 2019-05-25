@@ -1,21 +1,25 @@
 //
 //  UserCell.swift
-//  
+//  Haushalt
 //
-//  Created by Gatlin Carrier on 4/14/19.
+//  Created by Gatlin Carrier on 5/16/19.
+//  Copyright © 2019 Gatlin Carrier. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class UserCell: UICollectionViewCell {
-    
-    @IBOutlet weak var userNameLabel: UILabel!
-    
-    
-    var message: Message?
-    
-    func configureCell(user: User) {
-        userNameLabel.text = user.username
+class UserCell: UITableViewCell {
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
 }

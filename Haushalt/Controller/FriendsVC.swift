@@ -10,26 +10,31 @@ import UIKit
 import Firebase
 
 
-class FriendsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class FriendsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+
     
     var friends = [Friend]()
     var chats = [Chats]()
     var users = [User]()
-    
     var selectedUser: User?
+    var user: User?
+    var usersCollectionRef : CollectionReference!
+    var CollectionRef : CollectionReference!
     
-    private var usersCollectionRef : CollectionReference!
-    private var CollectionRef : CollectionReference!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
+        tableView.delegate = self
+        tableView.dataSource = self
+   
         usersCollectionRef = Firestore.firestore().collection("users")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,55 +45,47 @@ class FriendsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             else {
                 guard let snap = snapshot else { return }
                 for document in snap.documents {
+                    let id = "id"
                     let data = document.data()
                     let username = data["username"] as? String ?? ""
-                    let documentId = document.documentID
                     let email = data["email"] as? String ?? ""
                     let groups = data["groups"] as? Bool ?? false
                     let friends = data["friends"] as? Bool ?? false
-                    let newUser = User(username: username, documentId: documentId, email: email, groups: groups, friends: friends)
-                    
+                    let newUser = User(username: username, documentId: document.documentID, email: email, groups: groups, friends: friends, id: id)
                     self.users.append(newUser)
+                    
                 }
-                self.collectionView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.users.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "userCell", for: indexPath) as? UserCell {
-            cell.layer.cornerRadius = 6
-            cell.configureCell(user: users[indexPath.row])
-            
-        return cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell {
+            cell.layer.cornerRadius = 0
+            let user = users[indexPath.row]
+            cell.textLabel?.text = user.username
+            cell.textLabel?.textColor = UIColor.white
+            return cell
         }   else {
-                return UICollectionViewCell()
+            return UITableViewCell()
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedUser = users[indexPath.row]
-    }
     
-    var chatController : ChatVC?
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ChatVCSegueIdentifier"{
-            if let collectionCell: UserCell = sender as? UserCell {
-                if let collectionView: UICollectionView = collectionCell.superview as? UICollectionView {
-                    if let destinationViewController = segue.destination as? ChatVC {
-                        destinationViewController.selectedUser = users[collectionView.tag]
-                        destinationViewController.selectedUser = selectedUser
-                    }
-                }
+        if segue.identifier == "showChatVC" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = segue.destination as? ChatVC
+                controller?.user = users[indexPath.row]
+                print(user?.id)
             }
         }
     }
-    
     
 }

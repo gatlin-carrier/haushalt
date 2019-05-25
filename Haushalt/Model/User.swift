@@ -9,17 +9,18 @@
 import UIKit
 
 class User: NSObject {
-    var documentId: String?
+    
     var username: String?
     var email: String?
     var groups: Bool?
     var friends: Bool?
+    var id: String?
     
-    init(username: String, documentId: String, email: String, groups: Bool, friends: Bool) {
+    init(username: String, documentId: String, email: String, groups: Bool, friends: Bool, id: String) {
         self.username = username
-        self.documentId = documentId
         self.email = email
         self.groups = groups
         self.friends = friends
+        self.id = id
     }
 }

@@ -45,7 +45,6 @@ class CreateUserVC: UIViewController {
             guard let userId = user?.user.uid else { return }
             Firestore.firestore().collection(USERS_REF).document(userId).setData([
                 USERNAME : username,
-                 
                 ], completion: { (error) in
                     if let error = error {
                         debugPrint(error.localizedDescription)
